@@ -38,7 +38,8 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'semi': ['error', 'never'],
     'no-shadow': ['error'],
-    'arrow-parens': ['error']
+    'arrow-parens': ['error'],
+    'linebreak-style': 0
   }
 }
 
