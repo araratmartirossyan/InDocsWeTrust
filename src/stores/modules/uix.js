@@ -45,7 +45,7 @@ const actions = {
   handleUpdateText() {
     const { text, category, topic } = state.text
     const ref = firebase.database().ref()
-    ref.child('list').child(category.toLowerCase()).child(topic.toLowerCase())
+    ref.child(`list/${category.toLowerCase()}/${topic.toLowerCase()}`)
     .update({
       key: topic.toLowerCase(),
       name: topic,
@@ -94,10 +94,12 @@ const actions = {
   },
   handleRemovePage({ commit }, { category, topic }) {
     firebase.database().ref(category).child(topic).remove()
-    .then(() => {
-      firebase.database().ref('list').child(category).child(topic)
-      .remove()
-    })
+    .then(() =>
+      firebase
+        .database()
+        .ref(`list/${category}/${topic}`)
+        .remove()
+    )
   }
 }
 

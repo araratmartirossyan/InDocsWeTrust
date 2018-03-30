@@ -9,41 +9,46 @@
           v-if="!isEdited && $route.name === 'Content'"
           class="btn-left red"
           type="text"
-          @click="handleRemove()">
-            Remove this page
-            <i class="fa fa-trash"></i>
+          @click="handleRemove()"
+        >
+          Remove this page
+          <i class="fa fa-trash" />
         </el-button>
         <el-button
           v-if="!isEdited && $route.name === 'Content'"
           class="btn-left"
           type="text"
-          @click="goTo(`/edit/${$route.params.category}/${$route.params.topic}`)">
+          @click="goTo(`/edit/${$route.params.category}/${$route.params.topic}`)"
+        >
             Edit this page
-            <i class="fa fa-pencil"></i>
+            <i class="fa fa-pencil" />
         </el-button>
         <el-button
           v-if="!isEdited"
           class="btn-left"
           type="text"
-          @click="handleChangePage('/add/')">
-            Add new page 
-            <i class="fa fa-plus"></i>
+          @click="handleChangePage('/add/')"
+        >
+          Add new page 
+          <i class="fa fa-plus" />
         </el-button>
         <el-button 
           v-if="isEdited || $route.name === 'Edit'"
           class="btn-left"
           type="text"
-          @click="handleSave()">
-            Save
-            <i class="fa fa-save"></i>
+          @click="handleSave()"
+        >
+          Save
+          <i class="fa fa-save"></i>
         </el-button>
         <el-button
           v-if="isEdited || $route.name === 'Edit'"
           class="btn-left"
           type="text"
-          @click="handleChangePage('/')">
-            Close
-            <i class="fa fa-close"></i>
+          @click="handleChangePage('/')"
+        >
+          Close
+          <i class="fa fa-close"></i>
         </el-button>
       </el-col>
     </el-row>

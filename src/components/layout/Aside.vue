@@ -4,12 +4,13 @@
       <ul>
         <li 
           v-for="(index, key) in list" 
-          :key="key">
-            <a>{{key}}</a>
-            <Listing 
-              @handleChangeView="changeView"
-              :items="index"
-            />
+          :key="key"
+        >
+          <a>{{key}}</a>
+          <Listing 
+            @handleChangeView="changeView"
+            :items="index"
+          />
         </li>
       </ul>
     </div>
