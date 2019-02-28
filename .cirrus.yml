@@ -2,4 +2,6 @@ container:
   image: node:latest
 
 test_task:
-  script: yarn dev
+  script: yarn install
+  
+run_task: yarn dev
